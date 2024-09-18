@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from utils.lexicon.load_lexicon import load_lexicon
+from core.lexicon.load_lexicon import load_lexicon
 
 
 class Pagen:

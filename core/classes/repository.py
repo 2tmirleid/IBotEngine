@@ -3,7 +3,7 @@ from psycopg2.extras import DictCursor
 from src.dbms.connection import conn
 
 
-class Service:
+class Repository:
     def __init__(self):
         self.conn: conn = conn
 

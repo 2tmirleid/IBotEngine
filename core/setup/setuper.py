@@ -1,16 +1,14 @@
-import time
-
 from aiogram import Bot, Dispatcher
 
 from aiogram.fsm.storage.memory import MemoryStorage
 
-from utils.ibot_engine_factory.date.date_formatter import IBotEngineDateFormatter
-from utils.ibot_engine_factory.orm.create_models import create_tables
-from utils.logger import Logger
-from utils.watcher import Watcher
+from core.setup.date.date_formatter import IBotEngineDateFormatter
+from core.setup.models.create_models import create_tables
+from core.setup.logger import Logger
+from core.setup.watcher import Watcher
 
 
-class IBotEngineFactory:
+class IBotEngineSetuper:
     def __init__(self,
                  token:       str,
                  routers:     list = None,

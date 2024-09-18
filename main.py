@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 
 from src.example_dir import example_router, example_scene
-from utils.ibot_engine_factory.factory import IBotEngineFactory
+from core.setup.setuper import IBotEngineSetuper
 
 """Main app class"""
 
@@ -13,7 +13,7 @@ class Main:
     def __init__(self):
         load_dotenv(find_dotenv())
 
-        self.bot = IBotEngineFactory(token=os.environ["TOKEN"],
+        self.bot = IBotEngineSetuper(token=os.environ["TOKEN"],
                                      routers=[example_router.router],
                                      scenes=[example_scene.router])
     
